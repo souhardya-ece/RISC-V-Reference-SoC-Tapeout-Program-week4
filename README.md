@@ -8,4 +8,4 @@ channel width increase and the electron is move towards source to drain.Generall
 
 ## Introduction to Spice:-
 Spice Model parameter Vto,gamma,kn,lamda. 
-Input(spice model parameter+ Spice netlist) is feeding to the spice software we get the Wavefrom.
+Input(spice model parameter+ Spice netlist) is feeding to the spice software we get the Wavefrom.13

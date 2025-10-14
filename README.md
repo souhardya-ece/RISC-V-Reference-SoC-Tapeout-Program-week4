@@ -9,3 +9,12 @@ channel width increase and the electron is move towards source to drain.Generall
 ## Introduction to Spice:-
 Spice Model parameter Vto,gamma,kn,lamda. 
 Input(spice model parameter+ Spice netlist) is feeding to the spice software we get the Wavefrom.First define nodes. like M1 d g s b . Spice netlist + Tech file.
+### Simulation 
+```
+git colne https://github.com/kunalg123/sky130CircuitDesignWorkshop.git
+cd ~/VLSI/sky130CircuitDesignWorkshop/design
+sudo apt install ngspice
+ngspice day1_nfet_idvds_L2_W5.spice
+```
+
+

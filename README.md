@@ -42,6 +42,23 @@ In Cmos When Vin=Vdd Pmos(off) and Nmos(on)=> Discharge so Vout=0; When Vin=0 Pm
 Vgsn-Vin;Vdsn=Vout
 Vgsp=Vin-Vdd; Vdsp=Vout-Vdd
 Load Curve is the Idsn Vs Vout For both Pmos and Nmos by superimposing we get the VTC
+Spice Deck:-Component Connectivity and its value. Then define node. There are 4 node in Cmos inv 
+### Labs
+### VTC of CMOS
+```
+cd ~/VLSI/sky130CircuitDesignWorkshop/design
+vim day3_inv_vtc_Wp084_Wn036.spice
+ngspice day3_inv_vtc_Wp084_Wn036.spice
+plot out vs in
+```
+### Transiant Analysis of CMOS
+```
+cd ~/VLSI/sky130CircuitDesignWorkshop/design
+vim day3_inv_tran_Wp084_Wn036.spice
+ngspice day3_inv_tran_Wp084_Wn036.spice
+plot out vs in
+```
+
 
 
 

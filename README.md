@@ -39,6 +39,10 @@ same thing we can observe over here.
 mod(vgs)>mod(vt)=>On 
 mod(vgs)<mod(vt)=>Off
 In Cmos When Vin=Vdd Pmos(off) and Nmos(on)=> Discharge so Vout=0; When Vin=0 Pmos(on) and Nmos(off)=> Charging so Vout=1
+Vgsn-Vin;Vdsn=Vout
+Vgsp=Vin-Vdd; Vdsp=Vout-Vdd
+Load Curve is the Idsn Vs Vout For both Pmos and Nmos by superimposing we get the VTC
+
 
 
 

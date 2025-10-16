@@ -58,6 +58,8 @@ vim day3_inv_tran_Wp084_Wn036.spice
 ngspice day3_inv_tran_Wp084_Wn036.spice
 plot out vs in
 ```
+### CMOS inv Robustness
+1.Switching Threshold:- Vin=Vout Where the cmos cut Vgs=Vds and Idsp=-Idsn Depending upon the w/l of nmos and pmos the switching threshold will differ34
 
 
 

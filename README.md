@@ -61,6 +61,7 @@ plot out vs in
 ### CMOS inv Robustness
 1.Switching Threshold:- Vin=Vout Where the cmos cut atthat value Vm=Vin. Vgs=Vds and Idsp=-Idsn Depending upon the w/l of nmos and pmos the switching threshold will differ. When the ratio of Wp/Lp(increase) to the Wn/Ln is increase switeching threshold increase. as pmos have the more area. Rise delay decrease and fall delay increase . If the ratio is double then rise =Fall delay(This is the characteristics of clk inv)
 
+2.Noise Margin:- If the input is in bw 0 to ViL the o/p is VoH(1) and i/p is in bw viH to Vdd the o/p is VoL(0); ViL>VoL and VoH>ViH  40
 
 
 

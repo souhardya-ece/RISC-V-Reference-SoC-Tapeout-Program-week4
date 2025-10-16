@@ -59,7 +59,7 @@ ngspice day3_inv_tran_Wp084_Wn036.spice
 plot out vs in
 ```
 ### CMOS inv Robustness
-1.Switching Threshold:- Vin=Vout Where the cmos cut Vgs=Vds and Idsp=-Idsn Depending upon the w/l of nmos and pmos the switching threshold will differ34
+1.Switching Threshold:- Vin=Vout Where the cmos cut atthat value Vm=Vin. Vgs=Vds and Idsp=-Idsn Depending upon the w/l of nmos and pmos the switching threshold will differ. When the ratio of Wp/Lp(increase) to the Wn/Ln is increase switeching threshold increase. as pmos have the more area. Rise delay decrease and fall delay increase . If the ratio is double then rise =Fall delay(This is the characteristics of clk inv)
 
 
 

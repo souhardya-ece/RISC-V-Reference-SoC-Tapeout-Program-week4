@@ -26,7 +26,7 @@ plot -vdd#branch
 ```
 There is a Quadratic relation of Lower vlue of Vgs if vg gets increase it will have the linear relation with Id => Velocity saturation(Lower(linear)For higher E fiels Velocity of e becomes contant deu to scattering effect)
 Vgs-vt(min)=> Saturation; Vds(min)=> Linear Vdsat(min)=> Velocity saturation(Peak current also decrease)
-### Id vs Vgs PLot
+### Id vs Vgs PLot(Short Channel)
 ```
 cd ~/VLSI/sky130CircuitDesignWorkshop/design
 vim day2_nfet_idvgs_L015_W039.spice
@@ -34,6 +34,8 @@ ngspice day2_nfet_idvgs_L015_W039.spice
 plot -vdd#branch
 ```
 same thing we can observe over here.
+
+### VTC of CMOS
 
 
 

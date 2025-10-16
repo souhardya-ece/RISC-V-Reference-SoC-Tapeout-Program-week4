@@ -9,24 +9,34 @@ channel width increase and the electron is move towards source to drain.Generall
 ## Introduction to Spice:-
 Spice Model parameter Vto,gamma,kn,lamda. 
 Input(spice model parameter+ Spice netlist) is feeding to the spice software we get the Wavefrom.First define nodes. like M1 d g s b . Spice netlist + Tech file.
-### Simulation (Long Channel)
+### Simulation (Long Channel) Id vs Vds PLot
 ```
 git colne https://github.com/kunalg123/sky130CircuitDesignWorkshop.git
 cd ~/VLSI/sky130CircuitDesignWorkshop/design
 sudo apt install ngspice
 ngspice day1_nfet_idvds_L2_W5.spice
 ```
-There is a 
-### For Lower Node(Short Channel)
+There is a quadratic relation bw Id and Vgs
+### For Lower Node(Short Channel) Id vs Vgs Plot
 ```
-ngspice
-source file.cir
-run
-setplot
-dc1
-display
+cd ~/VLSI/sky130CircuitDesignWorkshop/design
+vim day2_nfet_idvds_L015_W039.spice
+ngspice day2_nfet_idvds_L015_W039.spice
 plot -vdd#branch
-```18.2
+```
+There is a Quadratic relation of Lower vlue of Vgs if vg gets increase it will have the linear relation with Id => Velocity saturation(Lower(linear)For higher E fiels Velocity of e becomes contant deu to scattering effect)
+Vgs-vt(min)=> Saturation; Vds(min)=> Linear Vdsat(min)=> Velocity saturation(Peak current also decrease)
+### Id vs Vgs PLot
+```
+cd ~/VLSI/sky130CircuitDesignWorkshop/design
+vim day2_nfet_idvgs_L015_W039.spice
+ngspice day2_nfet_idvgs_L015_W039.spice
+plot -vdd#branch
+```
+same thing we can observe over here.
+
+
+
 
 
 

@@ -61,8 +61,23 @@ plot out vs in
 ### CMOS inv Robustness
 1.Switching Threshold:- Vin=Vout Where the cmos cut atthat value Vm=Vin. Vgs=Vds and Idsp=-Idsn Depending upon the w/l of nmos and pmos the switching threshold will differ. When the ratio of Wp/Lp(increase) to the Wn/Ln is increase switeching threshold increase. as pmos have the more area. Rise delay decrease and fall delay increase . If the ratio is double then rise =Fall delay(This is the characteristics of clk inv)
 
-2.Noise Margin:- If the input is in bw 0 to ViL the o/p is VoH(1) and i/p is in bw viH to Vdd the o/p is VoL(0); ViL>VoL and VoH>ViH  40
+2.Noise Margin:- If the input is in bw 0 to ViL(0) the o/p is VoH(1) and i/p is in bw viH(1) to Vdd the o/p is VoL(0); ViL>VoL and VoH>ViH  and at ViL and ViH the slope is -1 . The difference bw VoH and ViH is NMH(1) . The diff bw ViL and VoL is NML(0). The diff bw ViH and ViL is undefined region(1/0). When W/L of pmos is increase and nmos is kept contant the NMH is increase and NML is constant at cretain point. NMH and NML area are used as digital design .Undefined region is used for analog design
 
+### Labs
+```
+cd ~/VLSI/sky130CircuitDesignWorkshop/design
+ngspice  day4_inv_noisemargin_wp1_wn036.spice
+plot out vs in
+```
+
+3. Power supply Scaling:- Keeping the W/L of nmos and pmos same we vary the Vdd To find out the gain of the cmos at two -1 slope and take the dely/delx . if the Vdd goes down the gain of the cmos get increase(adv) and energy goes down(adv) and the device cannot charge and discharge properly so there is an impact on perfromance(disadv).
+
+### Lab
+```
+cd ~/VLSI/sky130CircuitDesignWorkshop/design
+ngspice  day5_inv_supplyvariation_Wp1_Wn036.spice
+```
+4.Device Variation:- Etching process variation. Deu to fabrication process the shape(w/L) is distorted
 
 
 

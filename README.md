@@ -77,10 +77,15 @@ plot out vs in
 cd ~/VLSI/sky130CircuitDesignWorkshop/design
 ngspice  day5_inv_supplyvariation_Wp1_Wn036.spice
 ```
-4.Device Variation:- Etching process variation. Deu to fabrication process the shape(w/L) is distorted
+4.Device Variation:- Etching process variation. Deu to fabrication process the shape(w/L) is distorted that will impact on Id. Oxide thickness variation . Tox might not be unifrom through out the length so that will impact on id.Strong pmos (low resistence) and Weak nmos (high resistence) . so we vary the cmos to (strong pmos-weak nmos) to (weak nmos to strong nmos) the Vm decrease and NM decrease .
 
-
-
+We vary all the static thing still the operation of cmos is kept intact.
+###Lab
+```
+cd ~/VLSI/sky130CircuitDesignWorkshop/design
+ngspice  day5_inv_devicevariation_wp7_wn042.spice
+plot out vs in
+```
 
 
 

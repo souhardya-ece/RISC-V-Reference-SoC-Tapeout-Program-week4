@@ -24,7 +24,7 @@ vim day2_nfet_idvds_L015_W039.spice
 ngspice day2_nfet_idvds_L015_W039.spice
 plot -vdd#branch
 ```
-There is a Quadratic relation of Lower vlue of Vgs if vg gets increase it will have the linear relation with Id => Velocity saturation(Lower(linear)For higher E fiels Velocity of e becomes contant deu to scattering effect)
+There is a Quadratic relation of Lower vlue of Vgs if vg gets increase it will have the linear relation with Id => Velocity saturation(Lower(linear)For higher E fiels Velocity of e becomes contant deu to scattering effect) From Id vs Vds graph we get to know that the before cutoff region Id is 20 microamp and Vgs is 0.6v
 Vgs-vt(min)=> Saturation; Vds(min)=> Linear Vdsat(min)=> Velocity saturation(Peak current also decrease)
 ### Id vs Vgs PLot(Short Channel)
 ```
@@ -33,7 +33,7 @@ vim day2_nfet_idvgs_L015_W039.spice
 ngspice day2_nfet_idvgs_L015_W039.spice
 plot -vdd#branch
 ```
-same thing we can observe over here.
+same thing we can observe over here. From this Id vs Vgs graph we get the threshold voltage is 0.77v
 
 ### VTC of CMOS
 mod(vgs)>mod(vt)=>On 
@@ -43,6 +43,7 @@ Vgsn-Vin;Vdsn=Vout
 Vgsp=Vin-Vdd; Vdsp=Vout-Vdd
 Load Curve is the Idsn Vs Vout For both Pmos and Nmos by superimposing we get the VTC
 Spice Deck:-Component Connectivity and its value. Then define node. There are 4 node in Cmos inv 
+From the VTC characteristic of cmos we get the switching threshold is 0.876v
 ### Labs
 ### VTC of CMOS
 ```
@@ -58,10 +59,11 @@ vim day3_inv_tran_Wp084_Wn036.spice
 ngspice day3_inv_tran_Wp084_Wn036.spice
 plot out vs in
 ```
+From the transiant Analysis of cmos we get the rise delay(50% of vdd)=0.332s and fall delay(50% of vdd)=0.285s
 ### CMOS inv Robustness
 1.Switching Threshold:- Vin=Vout Where the cmos cut atthat value Vm=Vin. Vgs=Vds and Idsp=-Idsn Depending upon the w/l of nmos and pmos the switching threshold will differ. When the ratio of Wp/Lp(increase) to the Wn/Ln is increase switeching threshold increase. as pmos have the more area. Rise delay decrease and fall delay increase . If the ratio is double then rise =Fall delay(This is the characteristics of clk inv)
 
-2.Noise Margin:- If the input is in bw 0 to ViL(0) the o/p is VoH(1) and i/p is in bw viH(1) to Vdd the o/p is VoL(0); ViL>VoL and VoH>ViH  and at ViL and ViH the slope is -1 . The difference bw VoH and ViH is NMH(1) . The diff bw ViL and VoL is NML(0). The diff bw ViH and ViL is undefined region(1/0). When W/L of pmos is increase and nmos is kept contant the NMH is increase and NML is constant at cretain point. NMH and NML area are used as digital design .Undefined region is used for analog design
+2.Noise Margin:- If the input is in bw 0 to ViL(0) the o/p is VoH(1) and i/p is in bw viH(1) to Vdd the o/p is VoL(0); ViL>VoL and VoH>ViH  and at ViL and ViH the slope is -1 . The difference bw VoH and ViH is NMH(1) . The diff bw ViL and VoL is NML(0). The diff bw ViH and ViL is undefined region(1/0). When W/L of pmos is increase and nmos is kept contant the NMH is increase and NML is constant at cretain point. NMH and NML area are used as digital design .Undefined region is used for analog design. From the graph we We get VoH= 1.7v ViL=0.77v VoH=0.97v VoL=0.11v and NMH=0.733v NML=0.65v
 
 ### Labs
 ```

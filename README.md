@@ -17,7 +17,7 @@ sudo apt install ngspice
 ngspice day1_nfet_idvds_L2_W5.spice
 ```
 ### Output
-![image alt]()
+![image alt](https://github.com/souhardya-ece/RISC-V-Reference-SoC-Tapeout-Program-week4/blob/main/Images/Id%20vs%20Vds_Long.png)
 There is a quadratic relation bw Id and Vgs
 ### For Lower Node(Short Channel) Id vs Vgs Plot
 ```
@@ -27,7 +27,7 @@ ngspice day2_nfet_idvds_L015_W039.spice
 plot -vdd#branch
 ```
 ### Output
-![image alt]()
+![image alt](https://github.com/souhardya-ece/RISC-V-Reference-SoC-Tapeout-Program-week4/blob/main/Images/Id%20vs%20Vgs_Short.png)
 There is a Quadratic relation of Lower vlue of Vgs if vg gets increase it will have the linear relation with Id => Velocity saturation(Lower(linear)For higher E fiels Velocity of e becomes contant deu to scattering effect) From Id vs Vds graph we get to know that the before cutoff region Id is 20 microamp and Vgs is 0.6v
 Vgs-vt(min)=> Saturation; Vds(min)=> Linear Vdsat(min)=> Velocity saturation(Peak current also decrease)
 ### Id vs Vgs PLot(Short Channel)
@@ -38,7 +38,7 @@ ngspice day2_nfet_idvgs_L015_W039.spice
 plot -vdd#branch
 ```
 ### Output
-![image alt]()
+![image alt](https://github.com/souhardya-ece/RISC-V-Reference-SoC-Tapeout-Program-week4/blob/main/Images/Id%20vs%20Vgs.png)
 same thing we can observe over here. From this Id vs Vgs graph we get the threshold voltage is 0.77v
 
 ### VTC of CMOS
@@ -59,7 +59,7 @@ ngspice day3_inv_vtc_Wp084_Wn036.spice
 plot out vs in
 ```
 ### Output
-![image alt]()
+![image alt](https://github.com/souhardya-ece/RISC-V-Reference-SoC-Tapeout-Program-week4/blob/main/Images/VTC.png)
 ### Transiant Analysis of CMOS
 ```
 cd ~/VLSI/sky130CircuitDesignWorkshop/design
@@ -68,7 +68,7 @@ ngspice day3_inv_tran_Wp084_Wn036.spice
 plot out vs in
 ```
 ### Output
-![image alt]()
+![image alt](https://github.com/souhardya-ece/RISC-V-Reference-SoC-Tapeout-Program-week4/blob/main/Images/Transiant.png)
 From the transiant Analysis of cmos we get the rise delay(50% of vdd)=0.332s and fall delay(50% of vdd)=0.285s
 ### CMOS inv Robustness
 1.Switching Threshold:- Vin=Vout Where the cmos cut atthat value Vm=Vin. Vgs=Vds and Idsp=-Idsn Depending upon the w/l of nmos and pmos the switching threshold will differ. When the ratio of Wp/Lp(increase) to the Wn/Ln is increase switeching threshold increase. as pmos have the more area. Rise delay decrease and fall delay increase . If the ratio is double then rise =Fall delay(This is the characteristics of clk inv)
@@ -82,7 +82,7 @@ ngspice  day4_inv_noisemargin_wp1_wn036.spice
 plot out vs in
 ```
 ### Output
-![image alt]()
+![image alt](https://github.com/souhardya-ece/RISC-V-Reference-SoC-Tapeout-Program-week4/blob/main/Images/Vm.png)
 
 3. Power supply Scaling:- Keeping the W/L of nmos and pmos same we vary the Vdd To find out the gain of the cmos at two -1 slope and take the dely/delx . if the Vdd goes down the gain of the cmos get increase(adv) and energy goes down(adv) and the device cannot charge and discharge properly so there is an impact on perfromance(disadv).
 
@@ -92,7 +92,7 @@ cd ~/VLSI/sky130CircuitDesignWorkshop/design
 ngspice  day5_inv_supplyvariation_Wp1_Wn036.spice
 ```
 ### Output
-![image alt]()
+![image alt](https://github.com/souhardya-ece/RISC-V-Reference-SoC-Tapeout-Program-week4/blob/main/Images/Vary.png)
 4.Device Variation:- Etching process variation. Deu to fabrication process the shape(w/L) is distorted that will impact on Id. Oxide thickness variation . Tox might not be unifrom through out the length so that will impact on id.Strong pmos (low resistence) and Weak nmos (high resistence) . so we vary the cmos to (strong pmos-weak nmos) to (weak nmos to strong nmos) the Vm decrease and NM decrease .
 
 We vary all the static thing still the operation of cmos is kept intact.
@@ -103,7 +103,7 @@ ngspice  day5_inv_devicevariation_wp7_wn042.spice
 plot out vs in
 ```
 ### Output
-![image alt]()
+![image alt](https://github.com/souhardya-ece/RISC-V-Reference-SoC-Tapeout-Program-week4/blob/main/Images/Device.png)
 
 
 

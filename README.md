@@ -71,7 +71,7 @@ plot out vs in
 ![image alt](https://github.com/souhardya-ece/RISC-V-Reference-SoC-Tapeout-Program-week4/blob/main/Images/Transiant.png)
 From the transiant Analysis of cmos we get the rise delay(50% of vdd)=0.332s and fall delay(50% of vdd)=0.285s
 ### CMOS inv Robustness
-1.Switching Threshold:- Vin=Vout Where the cmos cut atthat value Vm=Vin. Vgs=Vds and Idsp=-Idsn Depending upon the w/l of nmos and pmos the switching threshold will differ. When the ratio of Wp/Lp(increase) to the Wn/Ln is increase switeching threshold increase. as pmos have the more area. Rise delay decrease and fall delay increase . If the ratio is double then rise =Fall delay(This is the characteristics of clk inv)
+1.Switching Threshold:- Vin=Vout Where the cmos cut atthat value Vm=Vin. Vgs=Vds and Idsp=-Idsn Depending upon the w/l of nmos and pmos the switching threshold will differ. When the ratio of Wp/Lp(increase) to the Wn/Ln is increase switeching threshold increase. as pmos have the more area. Rise delay decrease and fall delay increase . If the ratio is double then rise =Fall delay(This is the characteristics of clk inv);Vds=Vgs;Idsp=-Idsn;
 
 2.Noise Margin:- If the input is in bw 0 to ViL(0) the o/p is VoH(1) and i/p is in bw viH(1) to Vdd the o/p is VoL(0); ViL>VoL and VoH>ViH  and at ViL and ViH the slope is -1 . The difference bw VoH and ViH is NMH(1) . The diff bw ViL and VoL is NML(0). The diff bw ViH and ViL is undefined region(1/0). When W/L of pmos is increase and nmos is kept contant the NMH is increase and NML is constant at cretain point. NMH and NML area are used as digital design .Undefined region is used for analog design. From the graph we We get VoH= 1.7v ViL=0.77v VoH=0.97v VoL=0.11v and NMH=0.733v NML=0.65v
 
